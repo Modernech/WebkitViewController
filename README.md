@@ -12,13 +12,14 @@ WebkitViewController is a simple WKWebView-based WebViewController.
 
 It tries to remain as minimum as what an in-app webView with basic function would be.
 
+<img src="https://github.com/mshrwtnb/WebkitViewController/blob/master/SimulatorScreenShot-iPhone.png" width="400" height="400">
+
 ## Example
 ```Swift
 let URL = NSURL(string: "http://www.apple.com")
 let webViewController = WebkitViewController(withURL: URL, withCachePolicy: nil, withTimeoutInterval: nil)
 self.navigationController?.pushViewController(webViewController, animated: true)
 ```
-
 
 ## Requirements
 * Swift 2.2
