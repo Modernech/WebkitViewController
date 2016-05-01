@@ -12,7 +12,7 @@ WebkitViewController is a simple WKWebView-based WebViewController.
 
 It tries to remain as minimum as what an in-app webView with basic function would be.
 
-<img src="https://github.com/mshrwtnb/WebkitViewController/blob/master/SimulatorScreenShot-iPhone.png" width="400" height="400">
+<img src="https://github.com/mshrwtnb/WebkitViewController/blob/master/SimulatorScreenShot-iPhone.png" width="300" height="300">
 
 ## Example
 ```Swift
