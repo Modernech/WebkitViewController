@@ -1,0 +1,6 @@
+framework module WebkitViewController {
+  umbrella header "WebkitViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

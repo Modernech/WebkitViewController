@@ -1,0 +1,19 @@
+{
+  "name": "WebkitViewController",
+  "version": "0.1.0",
+  "summary": "A short description of WebkitViewController.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/WebkitViewController",
+  "license": "MIT",
+  "authors": {
+    "Masahiro Watanabe": "m@nsocean.org"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/WebkitViewController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "WebkitViewController/Classes/**/*"
+}
