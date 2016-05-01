@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'WebkitViewController_Example', :exclusive => true do
+  pod 'WebkitViewController', :path => '../'
+end
+
+target 'WebkitViewController_Tests', :exclusive => true do
+  pod 'WebkitViewController', :path => '../'
+
+  
+end
