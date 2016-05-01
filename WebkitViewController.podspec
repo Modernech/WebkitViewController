@@ -18,11 +18,12 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-WebkitViewController is a WKWebView-based WebViewController with Zen mind, built at the heart of Tokyo.
+WebkitViewController is a simple WKWebView-based WebViewController.
 
-It's equipped with basic navigation function such as Next, Back, Reload, Action and reacts to any orientation regardless of device type.
+* Basic navigation function such as Next, Back, Reload, Action.
+* Reacts to any orientation regardless of device type.
 
-The author kept it in mind that it should not go beyond what an in-app webView with basic function would be.
+It tries to remain as minimum as what an in-app webView with basic function would be.
                        DESC
 
   s.homepage         = "https://github.com/mshrwtnb/WebkitViewController"

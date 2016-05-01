@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WebkitViewController: 61e065325fa1fd94541cae793d4e6e09ff8d5dfb
+  WebkitViewController: ad352fdb71a7c0f54661822a784d2808b7fd5eb0
 
 COCOAPODS: 0.39.0

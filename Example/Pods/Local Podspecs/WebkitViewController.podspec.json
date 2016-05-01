@@ -1,15 +1,15 @@
 {
   "name": "WebkitViewController",
   "version": "0.1.0",
-  "summary": "A short description of WebkitViewController.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/WebkitViewController",
+  "summary": "WebkitViewController is a WKWebView-based WebViewController with Zen mind.",
+  "description": "WebkitViewController is a WKWebView-based WebViewController with Zen mind, built at the heart of Tokyo.\n\nIt's equipped with basic navigation function such as Next, Back, Reload, Action and reacts to any orientation regardless of device type.\n\nThe author kept it in mind that it should not go beyond what an in-app webView with basic function would be.",
+  "homepage": "https://github.com/mshrwtnb/WebkitViewController",
   "license": "MIT",
   "authors": {
     "Masahiro Watanabe": "m@nsocean.org"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/WebkitViewController.git",
+    "git": "https://github.com/mshrwtnb/WebkitViewController.git",
     "tag": "0.1.0"
   },
   "platforms": {

@@ -5,21 +5,39 @@
 [![License](https://img.shields.io/cocoapods/l/WebkitViewController.svg?style=flat)](http://cocoapods.org/pods/WebkitViewController)
 [![Platform](https://img.shields.io/cocoapods/p/WebkitViewController.svg?style=flat)](http://cocoapods.org/pods/WebkitViewController)
 
-## Example
+WebkitViewController is a simple WKWebView-based WebViewController.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+ * Basic navigation function such as Next, Back, Reload, Action.
+ * Reacts to any orientation regardless of device type.
+
+It tries to remain as minimum as what an in-app webView with basic function would be.
+
+## Example
+```Swift
+let URL = NSURL(string: "http://www.apple.com")
+let webViewController = WebkitViewController(withURL: URL, withCachePolicy: nil, withTimeoutInterval: nil)
+self.navigationController?.pushViewController(webViewController, animated: true)
+```
+
 
 ## Requirements
+* Swift 2.2
+* iOS 8.0 and later
+* iPhone or iPad
 
 ## Installation
 
-WebkitViewController is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+* [CocoaPods](http://cocoapods.org)
 
 ```ruby
 pod "WebkitViewController"
 ```
 
+* [Carthage](https://github.com/Carthage/Carthage)
+
+```
+Working on it.
+```
 ## Author
 
 Masahiro Watanabe, m@nsocean.org
