@@ -36,28 +36,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>05C5BA6F2C446D458B8B3CB159F28BB8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>WebkitViewController.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>05ECB67CABF0886376D5B08B851C8978</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Contents.json</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>061475C1F59971615F293858D41C52D1</key>
 		<dict>
 			<key>explicitFileType</key>
@@ -73,54 +51,10 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>067DA29C16B3CD50CBB1DD1ED26687F8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>9CF6AE0A231C59A0DCC89F4511698265</string>
-				<string>67C8EDD0B56D4C9E09183C4707370908</string>
-				<string>3BFEC7A9F0704DA5CA024D9DAE77D3F5</string>
-				<string>3BFEC7A9F0704DA5CA024D9DAE77D3F5</string>
-				<string>3BFEC7A9F0704DA5CA024D9DAE77D3F5</string>
-				<string>CF9093C9AD5B839F2501FA30F61511F4</string>
-				<string>26B12956C45A8028210CE964C1765527</string>
-				<string>24CE4E20AF7039D81615DFFC35FC3EA1</string>
-				<string>3B19D54B431F30DEDE02C70EA1E5E34F</string>
-				<string>95B9CB9430E5B7E8EA0AE6CBB56A7305</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>076C1496366AA63E4A3AED93C4EC6BC7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Contents.json</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>09E6FE7A2EDD62EF9BD5FCAFBF3B6858</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>forwardButton.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>0DAF596C332A585A498CD68F57133795</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>373F5CE844E95905F60E5BFCF0766BC3</string>
+			<string>67523E4A26E8785E13995CFC3CFBC698</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -146,22 +80,23 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>1A84DECEBAB372AB1C4C8FB8B085061B</key>
+		<key>19FD678DC43BB90FD4D934C79A915774</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>55C72D66CA8C40035191B231B689A6DC</string>
-				<string>8F3478E10359D7D10ECC3D5DF1E59946</string>
-				<string>076C1496366AA63E4A3AED93C4EC6BC7</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>backButton.imageset</string>
+			<string>PBXFileReference</string>
 			<key>path</key>
-			<string>backButton.imageset</string>
+			<string>forwardButton.png</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1A5FFD67CA4BA816A5DF19880666CC11</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5A8C71BB885AF7FB95D76B370E2108B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>1CB5C1A7DC3F6B68F175933F5313D46E</key>
 		<dict>
@@ -171,23 +106,6 @@
 			<string>PBXFileReference</string>
 			<key>path</key>
 			<string>Pods-WebkitViewController_Example.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1D09A6DCD78A5734E15D8F833C028F95</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>05ECB67CABF0886376D5B08B851C8978</string>
-				<string>1A84DECEBAB372AB1C4C8FB8B085061B</string>
-				<string>3A06ACDC440072A3543A865A1BA06A82</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Icons.xcassets</string>
-			<key>path</key>
-			<string>Icons.xcassets</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -217,26 +135,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2051214AAAAAD85E49E5438684AAF581</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>WebkitViewController-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>24CE4E20AF7039D81615DFFC35FC3EA1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D0D7F492EC40E8A48F6979E7C894992D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>2609EFC47D87018F974DE1DF7F51E985</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -250,12 +148,18 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>26B12956C45A8028210CE964C1765527</key>
+		<key>2CAF302C48D67D1678B40093C9737778</key>
 		<dict>
-			<key>fileRef</key>
-			<string>AE5DE1697A0475A64AADDC8E8C872DA7</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>2D2AAF298B0FF0211A8FA1C37A37EE14</key>
 		<dict>
@@ -298,16 +202,19 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>373F5CE844E95905F60E5BFCF0766BC3</key>
+		<key>344D6BD04BFA62309F1BABE77B157EC5</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>76E44441B52550FACBB623A0D6EDE684</string>
+				<string>5F53ABBC6A23F18D78B7DDB170594967</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Classes</string>
 			<key>path</key>
-			<string>WebkitViewController.xcconfig</string>
+			<string>Classes</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -322,31 +229,20 @@
 			<key>targetProxy</key>
 			<string>0063938E96B4E7F9F636F381A39A2704</string>
 		</dict>
-		<key>3A06ACDC440072A3543A865A1BA06A82</key>
+		<key>378C07870B72BC1D63363AF660BC0F57</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>F36426F014C60EEBD51850C6E907FB6A</string>
-				<string>09E6FE7A2EDD62EF9BD5FCAFBF3B6858</string>
-				<string>AE5DE1697A0475A64AADDC8E8C872DA7</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>forwardButton.imageset</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>forwardButton.imageset</string>
+			<string>WebkitViewController-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3B19D54B431F30DEDE02C70EA1E5E34F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3B6EA1C605B23012248D2CF62ACDB609</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3B6EA1C605B23012248D2CF62ACDB609</key>
+		<key>37DAADDA43C7B651EDEF3A4CFD21C7A2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -359,12 +255,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3BFEC7A9F0704DA5CA024D9DAE77D3F5</key>
+		<key>3E1683F5918FFA566B0CA5EB69FEE6B6</key>
 		<dict>
-			<key>fileRef</key>
-			<string>F36426F014C60EEBD51850C6E907FB6A</string>
+			<key>children</key>
+			<array>
+				<string>D121FDC7EF9DD914BB7ED9A8126698C0</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>3E4E89230EF59BC255123B67864ACF77</key>
 		<dict>
@@ -392,6 +294,30 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>4212E936B33620C928D323AF58902278</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>backButton.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>42D8C9A9FA6E754A6915AF3241AA83E7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D5425637CE10A2E2563B3CC321B5DB2C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Development Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>454A5A1F12A2282ED95D8ADA5A502DFE</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -411,7 +337,7 @@
 			<string>81BE0F0CB2AD0FEFC3A52DE6B95C05F4</string>
 			<key>buildPhases</key>
 			<array>
-				<string>067DA29C16B3CD50CBB1DD1ED26687F8</string>
+				<string>B8CE2B0310E67FF4DDC1F2312C69CFE0</string>
 				<string>F01155D7AA99DE04B9AC355F8C1EE5D0</string>
 				<string>2D2AAF298B0FF0211A8FA1C37A37EE14</string>
 				<string>9E776A27417FA275DE56A8F280DF4BEA</string>
@@ -446,6 +372,19 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>514E84F310043F2F43F9748F8A0D666A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>WebkitViewController-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>544257786E37C7A399616805D4D281C7</key>
 		<dict>
 			<key>fileRef</key>
@@ -453,16 +392,12 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>55C72D66CA8C40035191B231B689A6DC</key>
+		<key>55A2B920AA94C79687D99B3E9B8439E9</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>4212E936B33620C928D323AF58902278</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>backButton.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>58E20D4E8ADDB2C5B2BD04D132BCE513</key>
 		<dict>
@@ -490,10 +425,21 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>5A8C71BB885AF7FB95D76B370E2108B4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>backButton@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>5AECDBE3783B084C7C9CA36D00B61C28</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>373F5CE844E95905F60E5BFCF0766BC3</string>
+			<string>67523E4A26E8785E13995CFC3CFBC698</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -572,6 +518,26 @@
 			<key>targetProxy</key>
 			<string>75B8CF9C67648930EB5205ED3B38ED06</string>
 		</dict>
+		<key>5D08CECBA62C8722C1EF6BBCAA3C0035</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2CAF302C48D67D1678B40093C9737778</string>
+				<string>827E26F28499474508BD3875FE39D8AB</string>
+				<string>67523E4A26E8785E13995CFC3CFBC698</string>
+				<string>37DAADDA43C7B651EDEF3A4CFD21C7A2</string>
+				<string>514E84F310043F2F43F9748F8A0D666A</string>
+				<string>378C07870B72BC1D63363AF660BC0F57</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>Example/Pods/Target Support Files/WebkitViewController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>5E7775510A5EB8247B827347DFBD6B4F</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -584,6 +550,19 @@
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
+		</dict>
+		<key>5F53ABBC6A23F18D78B7DDB170594967</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>WebkitViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6088DF964E11B6014586AE1CA79A0801</key>
 		<dict>
@@ -601,7 +580,7 @@
 		<key>644324CEAC8E3D268054297B89DA0032</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2051214AAAAAD85E49E5438684AAF581</string>
+			<string>378C07870B72BC1D63363AF660BC0F57</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -612,25 +591,36 @@
 				</array>
 			</dict>
 		</dict>
-		<key>656B56938DC093B4071A67C8435403CA</key>
+		<key>67523E4A26E8785E13995CFC3CFBC698</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>WebkitViewController.swift</string>
+			<string>WebkitViewController.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>67C8EDD0B56D4C9E09183C4707370908</key>
+		<key>6AA4613987C80DE1EB2BFC558A7F52A4</key>
 		<dict>
-			<key>fileRef</key>
-			<string>8F3478E10359D7D10ECC3D5DF1E59946</string>
+			<key>children</key>
+			<array>
+				<string>4212E936B33620C928D323AF58902278</string>
+				<string>5A8C71BB885AF7FB95D76B370E2108B4</string>
+				<string>19FD678DC43BB90FD4D934C79A915774</string>
+				<string>CBFB64C9A834250773469AC6C506AD03</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>path</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6B97E35464CC81BE97ABA1ADC32CC99F</key>
 		<dict>
@@ -704,18 +694,12 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>6F6996A9D1E1C81EBB797A3582BA8EEC</key>
+		<key>7182AA945B2A3DC27906EE84F0C7C9EF</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>5F53ABBC6A23F18D78B7DDB170594967</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>WebkitViewController-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>75B8CF9C67648930EB5205ED3B38ED06</key>
 		<dict>
@@ -729,6 +713,19 @@
 			<string>4ADA754B2733DE5514EA74E0EA1C6FF7</string>
 			<key>remoteInfo</key>
 			<string>WebkitViewController</string>
+		</dict>
+		<key>76E44441B52550FACBB623A0D6EDE684</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>WebkitProtocols+Extensions.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>782BE8F99DE7152C893A2AD1C9042CC0</key>
 		<dict>
@@ -797,7 +794,7 @@
 			<key>children</key>
 			<array>
 				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>A7D25BF931EA9207065B3AF180D69B81</string>
+				<string>42D8C9A9FA6E754A6915AF3241AA83E7</string>
 				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
 				<string>A112EA50D77A5B6F468922B5C02A1E1A</string>
 				<string>D1EA448C5DA81E71E8065BEF6E72B020</string>
@@ -828,11 +825,11 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>81DA54B795FC342D230A9D69B72141A4</key>
+		<key>827375BCE3F130B2D796CFECBD90B6D5</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>F7647E5B45432091BE6AA6C2F94D9B60</string>
+				<string>344D6BD04BFA62309F1BABE77B157EC5</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -840,6 +837,17 @@
 			<string>WebkitViewController</string>
 			<key>path</key>
 			<string>WebkitViewController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>827E26F28499474508BD3875FE39D8AB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>WebkitViewController.modulemap</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -856,17 +864,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>8F3478E10359D7D10ECC3D5DF1E59946</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>backButton@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>901E2AF64DD069A8D85DAAF9D8BD2A4F</key>
 		<dict>
@@ -919,13 +916,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>95B9CB9430E5B7E8EA0AE6CBB56A7305</key>
-		<dict>
-			<key>fileRef</key>
-			<string>656B56938DC093B4071A67C8435403CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>96307CB970235EE81B69EC72582AA3D3</key>
 		<dict>
 			<key>fileRef</key>
@@ -936,7 +926,7 @@
 		<key>9BF6AFC9C008A97F183701AD19AD04F8</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>373F5CE844E95905F60E5BFCF0766BC3</string>
+			<string>67523E4A26E8785E13995CFC3CFBC698</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -955,13 +945,6 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>9CF6AE0A231C59A0DCC89F4511698265</key>
-		<dict>
-			<key>fileRef</key>
-			<string>55C72D66CA8C40035191B231B689A6DC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>9DA0D3ACA635F366DCB11E6FC86E490A</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -975,6 +958,13 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>9E56A5A0C3FE6666613CE1B1740D4F33</key>
+		<dict>
+			<key>fileRef</key>
+			<string>19FD678DC43BB90FD4D934C79A915774</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>9E776A27417FA275DE56A8F280DF4BEA</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -987,26 +977,6 @@
 			<string>PBXHeadersBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
-		</dict>
-		<key>A0F8CC66E06FA8413DF28519587AED23</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>AA6D070D0F77D921FD7884966BD679C7</string>
-				<string>05C5BA6F2C446D458B8B3CB159F28BB8</string>
-				<string>373F5CE844E95905F60E5BFCF0766BC3</string>
-				<string>3B6EA1C605B23012248D2CF62ACDB609</string>
-				<string>6F6996A9D1E1C81EBB797A3582BA8EEC</string>
-				<string>2051214AAAAAD85E49E5438684AAF581</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>Example/Pods/Target Support Files/WebkitViewController</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A112EA50D77A5B6F468922B5C02A1E1A</key>
 		<dict>
@@ -1023,6 +993,13 @@
 			<string>Products</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A1704046B13A7454250BAC49C6886753</key>
+		<dict>
+			<key>fileRef</key>
+			<string>37DAADDA43C7B651EDEF3A4CFD21C7A2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>A70CDAD61F90AC503C7D04CC22DA2923</key>
 		<dict>
@@ -1097,19 +1074,6 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>A7D25BF931EA9207065B3AF180D69B81</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B8AEF170EC0061F2CD8A47533B9AD1EA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Development Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>A83418D3BD159A6CF8FC686B6038FD38</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1120,19 +1084,6 @@
 			<string>text</string>
 			<key>path</key>
 			<string>Pods-WebkitViewController_Example-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AA6D070D0F77D921FD7884966BD679C7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1173,17 +1124,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>AE5DE1697A0475A64AADDC8E8C872DA7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>forwardButton@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B243606ECCE64F72D5F85FECC13BD5EA</key>
 		<dict>
@@ -1295,21 +1235,20 @@
 			<key>remoteInfo</key>
 			<string>WebkitViewController-WebkitViewController</string>
 		</dict>
-		<key>B8AEF170EC0061F2CD8A47533B9AD1EA</key>
+		<key>B8CE2B0310E67FF4DDC1F2312C69CFE0</key>
 		<dict>
-			<key>children</key>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>A0F8CC66E06FA8413DF28519587AED23</string>
-				<string>81DA54B795FC342D230A9D69B72141A4</string>
+				<string>F5CB001AD0E7C64D63236780793821DB</string>
+				<string>A1704046B13A7454250BAC49C6886753</string>
+				<string>7182AA945B2A3DC27906EE84F0C7C9EF</string>
 			</array>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>WebkitViewController</string>
-			<key>path</key>
-			<string>../..</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>B9E905B977562CD14784BD849C5DFE85</key>
 		<dict>
@@ -1364,7 +1303,7 @@
 			<array>
 				<string>6B97E35464CC81BE97ABA1ADC32CC99F</string>
 				<string>E09DE23E064E6D2044D0B9E054B05692</string>
-				<string>DA1D54ACA9D6323EDA810BC451366C76</string>
+				<string>F30E67A204DA40E405C9F86189A88D54</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -1471,23 +1410,29 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CF9093C9AD5B839F2501FA30F61511F4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>09E6FE7A2EDD62EF9BD5FCAFBF3B6858</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D0D7F492EC40E8A48F6979E7C894992D</key>
+		<key>CBFB64C9A834250773469AC6C506AD03</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
 			<key>path</key>
-			<string>WebkitProtocols+Extensions.swift</string>
+			<string>forwardButton@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D121FDC7EF9DD914BB7ED9A8126698C0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6AA4613987C80DE1EB2BFC558A7F52A4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>WebkitViewController</string>
+			<key>path</key>
+			<string>WebkitViewController</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1587,16 +1532,22 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>DA1D54ACA9D6323EDA810BC451366C76</key>
+		<key>D5425637CE10A2E2563B3CC321B5DB2C</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
+			<key>children</key>
+			<array>
+				<string>3E1683F5918FFA566B0CA5EB69FEE6B6</string>
+				<string>5D08CECBA62C8722C1EF6BBCAA3C0035</string>
+				<string>827375BCE3F130B2D796CFECBD90B6D5</string>
+			</array>
 			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>WebkitViewController</string>
+			<key>path</key>
+			<string>../..</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>E09DE23E064E6D2044D0B9E054B05692</key>
 		<dict>
@@ -1651,21 +1602,6 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>ED84F5020845FFC1D51C59DD012DB33C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1D09A6DCD78A5734E15D8F833C028F95</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>path</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>EDA5262FE5E8AD2C5B80E5C37A38D188</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1706,7 +1642,7 @@
 		<key>F19419F77DA56957D5E5B7D45149CAE4</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>373F5CE844E95905F60E5BFCF0766BC3</string>
+			<string>67523E4A26E8785E13995CFC3CFBC698</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1759,16 +1695,21 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>F36426F014C60EEBD51850C6E907FB6A</key>
+		<key>F30E67A204DA40E405C9F86189A88D54</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>55A2B920AA94C79687D99B3E9B8439E9</string>
+				<string>1A5FFD67CA4BA816A5DF19880666CC11</string>
+				<string>9E56A5A0C3FE6666613CE1B1740D4F33</string>
+				<string>F9FEAC9BCE933F5FB758D4881A08831D</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Contents.json</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>F46D1D51485A20715AD6A2FD49F99E45</key>
 		<dict>
@@ -1782,6 +1723,13 @@
 			<string>Pods-WebkitViewController_Tests-acknowledgements.markdown</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F5CB001AD0E7C64D63236780793821DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>76E44441B52550FACBB623A0D6EDE684</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>F65782614C8CFE1A1CBDC0FDC8F74C6B</key>
 		<dict>
@@ -1804,23 +1752,6 @@
 			<string>Pods-WebkitViewController_Tests</string>
 			<key>path</key>
 			<string>Target Support Files/Pods-WebkitViewController_Tests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F7647E5B45432091BE6AA6C2F94D9B60</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D0D7F492EC40E8A48F6979E7C894992D</string>
-				<string>656B56938DC093B4071A67C8435403CA</string>
-				<string>ED84F5020845FFC1D51C59DD012DB33C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
-			<key>path</key>
-			<string>Classes</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1885,6 +1816,13 @@
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Release</string>
+		</dict>
+		<key>F9FEAC9BCE933F5FB758D4881A08831D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CBFB64C9A834250773469AC6C506AD03</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>FB45FFD90572718D82AB9092B750F0CA</key>
 		<dict>

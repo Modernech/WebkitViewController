@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "WebkitViewController"
-  s.version          = "0.1.3"
+  s.version          = "0.1.4"
   s.summary          = "WebkitViewController is a WKWebView-based WebViewController with Zen mind."
 
 # This description is used to generate tags and improve search results.
@@ -38,7 +38,7 @@ It tries to remain as basic as what an in-app webView would be.
   s.source_files = 'WebkitViewController/Classes/**/*'
   
   s.resource_bundles = {
-    'WebkitViewController' => ['WebkitViewController/Classes/Icons.xcassets']
+    'WebkitViewController' => ['WebkitViewController/Resources/*.png']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

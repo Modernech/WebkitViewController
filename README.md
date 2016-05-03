@@ -42,6 +42,10 @@ pod "WebkitViewController"
 ```
 Working on it.
 ```
+
+## Settings
+* Disable NSAppTransportSecurity for unlimited browsing.
+
 ## Author
 
 Masahiro Watanabe, m@nsocean.org
