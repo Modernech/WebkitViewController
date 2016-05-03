@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "WebkitViewController"
-  s.version          = "0.1.6"
+  s.version          = "0.1.7"
   s.summary          = "WebkitViewController is a WKWebView-based WebViewController with Zen mind."
   s.description      = <<-DESC
 WebkitViewController is a simple WKWebView-based WebViewController written purely in Swift.
