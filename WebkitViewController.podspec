@@ -23,7 +23,7 @@ WebkitViewController is a simple WKWebView-based WebViewController written purel
 * Basic navigation functions such as Next, Back, Reload, Action.
 * Compatible with any orientation regardless of device type.
 
-It tries to remain as basic as what an in-app webView with basic function would be.
+It tries to remain as basic as what an in-app webView would be.
                        DESC
 
   s.homepage         = "https://github.com/mshrwtnb/WebkitViewController"
@@ -37,9 +37,9 @@ It tries to remain as basic as what an in-app webView with basic function would 
 
   s.source_files = 'WebkitViewController/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'WebkitViewController' => ['WebkitViewController/Assets/*.png']
-  # }
+  #s.resource_bundles = {
+  #  'WebkitViewController' => ['WebkitViewController/Assets/*.png']
+  #}
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
