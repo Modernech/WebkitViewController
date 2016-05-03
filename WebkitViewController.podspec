@@ -28,11 +28,11 @@ It tries to remain as basic as what an in-app webView would be.
 
   s.source_files = 'WebkitViewController/Classes/**/*'
   
-  #s.resource_bundles = {
-  #  'WebkitViewController' => ['Pod/Assets/*.png']
-  #}
+  s.resource_bundles = {
+    'WebkitViewController' => ['Pod/Assets/*.png']
+  }
 
-  s.resources = ['Pod/Assets/**/*.png']
+  #s.resources = ['Pod/Assets/**/*.png']
 
   s.frameworks = 'UIKit', 'MapKit'
 
