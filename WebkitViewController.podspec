@@ -26,7 +26,7 @@ It tries to remain as basic as what an in-app webView would be.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'WebkitViewController/Classes/**/*'
   
   s.resource_bundles = {
     'WebkitViewController' => ['Pod/Resources/*.png']
