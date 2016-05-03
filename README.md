@@ -12,6 +12,9 @@ WebkitViewController is a simple WKWebView-based WebViewController written purel
 
 It tries to remain as minimum as what an in-app webView with basic function would be.
 
+## Image
+* Toolbar with Next, Back, Reload, Action buttons
+
 <img src="https://raw.githubusercontent.com/mshrwtnb/WebkitViewController/master/Images/SimulatorScreenShot-iPhone.png" width="200" height="412">
 
 ## Example
