@@ -18,7 +18,7 @@ enum ObservedWebViewProperties: String {
     static let allValues = [estimatedProgress, canGoBack, canGoForward, loading, title]
 }
 
-protocol WebkitBrowsable: WKNavigationDelegate, WKUIDelegate {
+protocol WebkitBrowsable: WKUIDelegate {
     var webView: WKWebView { get }
     var progressView: UIProgressView { get }
     
@@ -43,7 +43,7 @@ extension WebkitBrowsable where Self: UIViewController {
     }
 }
 
-protocol WebkitNavigationable: class {
+protocol WebkitNavigationable: WKNavigationDelegate {
     var backButton: UIBarButtonItem { get }
     var forwardButton: UIBarButtonItem { get }
     var reloadButton: UIBarButtonItem { get }
@@ -61,9 +61,10 @@ extension WebkitNavigationable where Self: UIViewController {
         case .Phone:
             // Vertical ? items for vertical layout : horizontal layout
             return traitCollection.verticalSizeClass == .Regular ? toolbarItemsWithFlexibleSpace() : toolbarItemsWithFixedSpaceWidth(45.0)
+            
         case .Pad:
             return toolbarItemsWithFixedSpaceWidth(55.0)
-            
+        
         default:
             return nil
         }

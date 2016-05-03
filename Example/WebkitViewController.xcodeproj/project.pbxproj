@@ -14,8 +14,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		DAFC5EE7A2214637AE0636EA /* Pods_WebkitViewController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA369107F2FCC7B5EC1FB11B /* Pods_WebkitViewController_Example.framework */; };
-		DFF0DD121CD6336E0059E1B4 /* ExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF0DD111CD6336E0059E1B4 /* ExampleTableViewController.swift */; };
-		DFF0DD141CD633910059E1B4 /* WebkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF0DD131CD633910059E1B4 /* WebkitViewController.swift */; };
+		DFFA53ED1CD8509100AB2199 /* ExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA53EC1CD8509100AB2199 /* ExampleTableViewController.swift */; };
+		DFFA53EF1CD850B600AB2199 /* WebkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA53EE1CD850B600AB2199 /* WebkitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +47,8 @@
 		C57C460571FA242827774509 /* Pods_WebkitViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebkitViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA369107F2FCC7B5EC1FB11B /* Pods_WebkitViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebkitViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1B89C735D07A77F7CFD4E3 /* WebkitViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WebkitViewController.podspec; path = ../WebkitViewController.podspec; sourceTree = "<group>"; };
-		DFF0DD111CD6336E0059E1B4 /* ExampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewController.swift; sourceTree = "<group>"; };
-		DFF0DD131CD633910059E1B4 /* WebkitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebkitViewController.swift; sourceTree = "<group>"; };
+		DFFA53EC1CD8509100AB2199 /* ExampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewController.swift; sourceTree = "<group>"; };
+		DFFA53EE1CD850B600AB2199 /* WebkitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebkitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,8 +161,8 @@
 		DFF0DD151CD6339E0059E1B4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DFF0DD111CD6336E0059E1B4 /* ExampleTableViewController.swift */,
-				DFF0DD131CD633910059E1B4 /* WebkitViewController.swift */,
+				DFFA53EE1CD850B600AB2199 /* WebkitViewController.swift */,
+				DFFA53EC1CD8509100AB2199 /* ExampleTableViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -386,9 +386,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFF0DD121CD6336E0059E1B4 /* ExampleTableViewController.swift in Sources */,
-				DFF0DD141CD633910059E1B4 /* WebkitViewController.swift in Sources */,
+				DFFA53ED1CD8509100AB2199 /* ExampleTableViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				DFFA53EF1CD850B600AB2199 /* WebkitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
