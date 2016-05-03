@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-enum ObservedWebViewProperties: String {
+public enum ObservedWebViewProperties: String {
     case estimatedProgress
     case canGoBack
     case canGoForward
@@ -18,74 +18,12 @@ enum ObservedWebViewProperties: String {
     static let allValues = [estimatedProgress, canGoBack, canGoForward, loading, title]
 }
 
-protocol WebkitBrowsable: WKUIDelegate {
-    var webView: WKWebView { get }
-    var progressView: UIProgressView { get }
-    
-    var URL: NSURL? { get }
-    var cachePolicy: NSURLRequestCachePolicy { get }
-    var timeoutInterval: NSTimeInterval { get }
-    
-    init(withURL URL: NSURL?, withCachePolicy cachePolicy: NSURLRequestCachePolicy?, withTimeoutInterval timeoutInterval: NSTimeInterval?)
-}
-
-extension WebkitBrowsable where Self: UIViewController {
-    func progressViewFrame() -> CGRect {
-        guard let navigationController = self.navigationController else { return CGRectZero }
-        
-        let progressBarHeight: CGFloat = 2.0
-        let navigationBarBounds = navigationController.navigationBar.bounds;
-        let barFrame = CGRectMake(0,
-                                  navigationBarBounds.size.height - progressBarHeight,
-                                  navigationBarBounds.size.width,
-                                  progressBarHeight);
-        return barFrame
-    }
-}
-
-protocol WebkitNavigationable: WKNavigationDelegate {
-    var backButton: UIBarButtonItem { get }
-    var forwardButton: UIBarButtonItem { get }
-    var reloadButton: UIBarButtonItem { get }
-    var actionButton: UIBarButtonItem { get }
-    var doneButton: UIBarButtonItem { get }
-}
-
-extension WebkitNavigationable where Self: UIViewController {
-    func allToolbarItems() -> [UIBarButtonItem] {
-        return [backButton, forwardButton, reloadButton, actionButton, doneButton]
+public extension WebkitViewController {
+    func wasPresented() -> Bool {
+        return navigationController?.viewControllers.count == 1 &&
+            navigationController?.viewControllers[0] == self
     }
     
-    func navigationToolbarItems() -> [UIBarButtonItem]? {
-        switch(UI_USER_INTERFACE_IDIOM()){
-        case .Phone:
-            // Vertical ? items for vertical layout : horizontal layout
-            return traitCollection.verticalSizeClass == .Regular ? toolbarItemsWithFlexibleSpace() : toolbarItemsWithFixedSpaceWidth(45.0)
-            
-        case .Pad:
-            return toolbarItemsWithFixedSpaceWidth(55.0)
-        
-        default:
-            return nil
-        }
-    }
-    
-    func toolbarItemsWithFlexibleSpace() -> [UIBarButtonItem] {
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        let items = [backButton, flexibleSpace, forwardButton, flexibleSpace, reloadButton, flexibleSpace, actionButton]
-        return items
-    }
-    
-    func toolbarItemsWithFixedSpaceWidth(width: CGFloat) -> [UIBarButtonItem] {
-        let fixedSpace = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
-        fixedSpace.width = width
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        let items = [backButton, fixedSpace, forwardButton, fixedSpace, reloadButton, flexibleSpace, actionButton]
-        return items
-    }
-}
-
-extension WebkitViewController {
     func becomeToolbarItemsTarget(){
         allToolbarItems().forEach {
             $0.target = self
@@ -169,17 +107,9 @@ extension WebkitViewController {
     }
 }
 
-extension UIViewController {
-    func wasPresented() -> Bool {
-        return navigationController?.viewControllers.count == 1 && navigationController?.viewControllers[0] == self
-    }
-}
-
-typealias WebkitProtocol = protocol<WebkitBrowsable, WebkitNavigationable>
-
-class WebkitViewController: UIViewController, WebkitProtocol {
+public class WebkitViewController: UIViewController, WebkitProtocol {
     // MARK: Properties
-    lazy var webView: WKWebView = {
+    public lazy var webView: WKWebView = {
         let webView = WKWebView(frame: CGRectZero, configuration: WKWebViewConfiguration())
         webView.contentMode = .Redraw
         webView.opaque = true
@@ -190,25 +120,25 @@ class WebkitViewController: UIViewController, WebkitProtocol {
         return webView
     }()
     
-    lazy var progressView: UIProgressView = {
+    public lazy var progressView: UIProgressView = {
         let progressView = UIProgressView(progressViewStyle: .Default)
         progressView.alpha = 0.0
         progressView.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
         return progressView
     }()
     
-    var URL: NSURL?
-    var cachePolicy: NSURLRequestCachePolicy
-    var timeoutInterval: NSTimeInterval
+    public var URL: NSURL?
+    public var cachePolicy: NSURLRequestCachePolicy
+    public var timeoutInterval: NSTimeInterval
     
-    var backButton: UIBarButtonItem
-    var forwardButton: UIBarButtonItem
-    var reloadButton: UIBarButtonItem
-    var actionButton: UIBarButtonItem
-    lazy var doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: nil, action: nil)
+    public var backButton: UIBarButtonItem
+    public var forwardButton: UIBarButtonItem
+    public var reloadButton: UIBarButtonItem
+    public var actionButton: UIBarButtonItem
+    lazy public var doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: nil, action: nil)
     
     // MARK: Initializer
-    required init(withURL URL: NSURL?, withCachePolicy cachePolicy: NSURLRequestCachePolicy?, withTimeoutInterval timeoutInterval: NSTimeInterval?) {
+    public required init(withURL URL: NSURL?, withCachePolicy cachePolicy: NSURLRequestCachePolicy?, withTimeoutInterval timeoutInterval: NSTimeInterval?) {
         
         self.cachePolicy = cachePolicy != nil ? cachePolicy! : .ReloadIgnoringLocalCacheData
         self.timeoutInterval = timeoutInterval != nil ? timeoutInterval! : 30.0
@@ -235,7 +165,7 @@ class WebkitViewController: UIViewController, WebkitProtocol {
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -244,9 +174,8 @@ class WebkitViewController: UIViewController, WebkitProtocol {
     }
     
     // MARK: Life Cycle
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
-        
         progressView.frame = progressViewFrame()
         navigationController?.navigationBar.addSubview(progressView)
         
@@ -254,19 +183,19 @@ class WebkitViewController: UIViewController, WebkitProtocol {
         view.addSubview(webView)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(false, animated: false)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override public func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setToolbarHidden(true, animated: false)
         progressView.removeFromSuperview()
     }
     
     // MARK: Trait
-    override func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
+    override public func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         
         if wasPresented() {
@@ -278,7 +207,7 @@ class WebkitViewController: UIViewController, WebkitProtocol {
     }
     
     // MARK: WKNavigationDelegate - implement more if you like
-    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+    public func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
         // It's kind of odd that we need JS to read loaded HTML?
         webView.evaluateJavaScript("document.body.innerHTML", completionHandler: {
             (html, error) in

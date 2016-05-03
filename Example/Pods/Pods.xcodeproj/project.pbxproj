@@ -17,6 +17,8 @@
 		9460883458EBAA0AF484C68C5FE8C083 /* WebkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7271BD3A9CF6FDCF488FB5B64EB466DF /* WebkitViewController.swift */; };
 		96307CB970235EE81B69EC72582AA3D3 /* Pods-WebkitViewController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4209878310DCC020D929BE408E6A29CB /* Pods-WebkitViewController_Example-dummy.m */; };
 		AE345B3E12B96D3C302354A889E30431 /* Pods-WebkitViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D233A3DA8847EBC9DD7655F4E539AD5C /* Pods-WebkitViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFFC17B81CD8D41A0018CD97 /* WebkitProtocols+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFC17B71CD8D41A0018CD97 /* WebkitProtocols+Extensions.swift */; };
+		DFFC17B91CD8D41A0018CD97 /* WebkitProtocols+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFC17B71CD8D41A0018CD97 /* WebkitProtocols+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +68,11 @@
 		C93A4B09813E5AD191EE5539728D644D /* Pods-WebkitViewController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WebkitViewController_Example-frameworks.sh"; sourceTree = "<group>"; };
 		D233A3DA8847EBC9DD7655F4E539AD5C /* Pods-WebkitViewController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WebkitViewController_Tests-umbrella.h"; sourceTree = "<group>"; };
 		D53FAC6DFDA90F6406FEEA3C46458F77 /* Pods-WebkitViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WebkitViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DFFC17AE1CD8ACF70018CD97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DFFC17B31CD8D3950018CD97 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
+		DFFC17B41CD8D3950018CD97 /* backButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton@2x.png"; sourceTree = "<group>"; };
+		DFFC17B51CD8D3950018CD97 /* nextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextButton.png; sourceTree = "<group>"; };
+		DFFC17B61CD8D3950018CD97 /* nextButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nextButton@2x.png"; sourceTree = "<group>"; };
+		DFFC17B71CD8D41A0018CD97 /* WebkitProtocols+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebkitProtocols+Extensions.swift"; sourceTree = "<group>"; };
 		EDA5262FE5E8AD2C5B80E5C37A38D188 /* Pods-WebkitViewController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WebkitViewController_Tests.modulemap"; sourceTree = "<group>"; };
 		F15A829E0AE3DA7047A2BBCDE0A93D77 /* Pods-WebkitViewController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WebkitViewController_Example-umbrella.h"; sourceTree = "<group>"; };
 		F46D1D51485A20715AD6A2FD49F99E45 /* Pods-WebkitViewController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WebkitViewController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -197,7 +203,10 @@
 		DFFC17AD1CD8ACF70018CD97 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DFFC17AE1CD8ACF70018CD97 /* Images.xcassets */,
+				DFFC17B31CD8D3950018CD97 /* backButton.png */,
+				DFFC17B41CD8D3950018CD97 /* backButton@2x.png */,
+				DFFC17B51CD8D3950018CD97 /* nextButton.png */,
+				DFFC17B61CD8D3950018CD97 /* nextButton@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -207,6 +216,7 @@
 			children = (
 				DFFC17AD1CD8ACF70018CD97 /* Resources */,
 				7271BD3A9CF6FDCF488FB5B64EB466DF /* WebkitViewController.swift */,
+				DFFC17B71CD8D41A0018CD97 /* WebkitProtocols+Extensions.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -328,7 +338,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -363,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFFC17B91CD8D41A0018CD97 /* WebkitProtocols+Extensions.swift in Sources */,
 				0AFC3486A24ABD02B4E856CD7C8DB04E /* WebkitViewController-dummy.m in Sources */,
 				9460883458EBAA0AF484C68C5FE8C083 /* WebkitViewController.swift in Sources */,
 			);
@@ -372,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFFC17B81CD8D41A0018CD97 /* WebkitProtocols+Extensions.swift in Sources */,
 				96307CB970235EE81B69EC72582AA3D3 /* Pods-WebkitViewController_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6B113996CC02693FD1D5E58EAECB531 /* Pods-WebkitViewController_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -526,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D53FAC6DFDA90F6406FEEA3C46458F77 /* Pods-WebkitViewController_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
