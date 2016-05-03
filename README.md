@@ -5,14 +5,14 @@
 [![License](https://img.shields.io/cocoapods/l/WebkitViewController.svg?style=flat)](http://cocoapods.org/pods/WebkitViewController)
 [![Platform](https://img.shields.io/cocoapods/p/WebkitViewController.svg?style=flat)](http://cocoapods.org/pods/WebkitViewController)
 
-WebkitViewController is a simple WKWebView-based WebViewController.
+WebkitViewController is a simple WKWebView-based WebViewController written purely in Swift.
 
- * Basic navigation function such as Next, Back, Reload, Action.
+ * Basic navigation functions such as Next, Back, Reload, Action.
  * Reacts to any orientation regardless of device type.
 
 It tries to remain as minimum as what an in-app webView with basic function would be.
 
-<img src="https://github.com/mshrwtnb/WebkitViewController/blob/master/SimulatorScreenShot-iPhone.png" width="300" height="300">
+<img src="https://raw.githubusercontent.com/mshrwtnb/WebkitViewController/master/Images/SimulatorScreenShot-iPhone.png" width="300" height="300">
 
 ## Example
 ```Swift
