@@ -31,5 +31,7 @@ It tries to remain as basic as what an in-app webView would be.
   s.resource_bundles = {
     'WebkitViewController' => ['Pod/Resources/*.png']
   }
-  s.frameworks = 'UIKit', 'MapKit
+
+  s.frameworks = 'UIKit', 'MapKit'
+
 end
