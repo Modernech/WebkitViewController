@@ -29,7 +29,7 @@ It tries to remain as basic as what an in-app webView would be.
   s.source_files = 'WebkitViewController/Classes/**/*'
   
   s.resource_bundles = {
-    'WebkitViewController' => ['Pod/Assets/*.png']
+    'WebkitViewController' => ['WebkitViewController/Classes/Resources/*.png']
   }
 
   #s.resources = ['Pod/Assets/**/*.png']
