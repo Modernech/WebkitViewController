@@ -21,7 +21,7 @@ enum ObservedWebViewProperties: String {
 protocol WebkitBrowsable: WKNavigationDelegate, WKUIDelegate {
     var webView: WKWebView { get }
     var progressView: UIProgressView { get }
-
+    
     var URL: NSURL? { get }
     var cachePolicy: NSURLRequestCachePolicy { get }
     var timeoutInterval: NSTimeInterval { get }
@@ -60,10 +60,9 @@ extension WebkitNavigationable where Self: UIViewController {
         switch(UI_USER_INTERFACE_IDIOM()){
         case .Phone:
             // Vertical ? items for vertical layout : horizontal layout
-            return traitCollection.verticalSizeClass == .Regular ? toolbarItemsWithFlexibleSpace() : toolbarItems(withFixedSpaceWidth: 45.0)
-            
+            return traitCollection.verticalSizeClass == .Regular ? toolbarItemsWithFlexibleSpace() : toolbarItemsWithFixedSpaceWidth(45.0)
         case .Pad:
-            return toolbarItems(withFixedSpaceWidth: 55.0)
+            return toolbarItemsWithFixedSpaceWidth(55.0)
             
         default:
             return nil
@@ -76,7 +75,7 @@ extension WebkitNavigationable where Self: UIViewController {
         return items
     }
     
-    func toolbarItems(withFixedSpaceWidth width: CGFloat) -> [UIBarButtonItem] {
+    func toolbarItemsWithFixedSpaceWidth(width: CGFloat) -> [UIBarButtonItem] {
         let fixedSpace = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
         fixedSpace.width = width
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
@@ -97,13 +96,13 @@ extension WebkitViewController {
         switch(item){
         case self.backButton:
             webView.goBack()
-        
+            
         case self.forwardButton:
             webView.goForward()
-        
+            
         case self.reloadButton:
             webView.reload()
-        
+            
         case self.actionButton:
             guard let url = webView.URL?.absoluteString else { return }
             let activity = UIActivityViewController(activityItems:[url], applicationActivities: nil)
@@ -111,11 +110,11 @@ extension WebkitViewController {
             switch(UI_USER_INTERFACE_IDIOM()){
             case .Phone:
                 presentViewController(activity, animated: true, completion: nil)
-            
+                
             case .Pad:
                 let popover = UIPopoverController(contentViewController: activity)
                 popover.presentPopoverFromBarButtonItem(item, permittedArrowDirections: .Any, animated: true)
-            
+                
             default:
                 ()
             }
@@ -272,7 +271,7 @@ class WebkitViewController: UIViewController, WebkitProtocol {
         if wasPresented() {
             navigationItem.rightBarButtonItems = [doneButton]
         }
-    
+        
         let items = navigationToolbarItems()
         setToolbarItems(items, animated: false)
     }
