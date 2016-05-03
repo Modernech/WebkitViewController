@@ -1,8 +1,8 @@
 {
   "name": "WebkitViewController",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "summary": "WebkitViewController is a WKWebView-based WebViewController with Zen mind.",
-  "description": "WebkitViewController is a WKWebView-based WebViewController with Zen mind, built at the heart of Tokyo.\n\nIt's equipped with basic navigation function such as Next, Back, Reload, Action and reacts to any orientation regardless of device type.\n\nThe author kept it in mind that it should not go beyond what an in-app webView with basic function would be.",
+  "description": "WebkitViewController is a simple WKWebView-based WebViewController written purely in Swift.\n\n* Basic navigation functions such as Next, Back, Reload, Action.\n* Compatible with any orientation regardless of device type.\n\nIt tries to remain as basic as what an in-app webView would be.",
   "homepage": "https://github.com/mshrwtnb/WebkitViewController",
   "license": "MIT",
   "authors": {
@@ -10,10 +10,15 @@
   },
   "source": {
     "git": "https://github.com/mshrwtnb/WebkitViewController.git",
-    "tag": "0.1.0"
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "WebkitViewController/Classes/**/*"
+  "source_files": "WebkitViewController/Classes/**/*",
+  "resource_bundles": {
+    "WebkitViewController": [
+      "WebkitViewController/Classes/Icons.xcassets"
+    ]
+  }
 }

@@ -6,6 +6,4 @@ end
 
 target 'WebkitViewController_Tests', :exclusive => true do
   pod 'WebkitViewController', :path => '../'
-
-  
 end

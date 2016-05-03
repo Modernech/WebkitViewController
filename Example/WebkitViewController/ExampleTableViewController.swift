@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import WebkitViewController
 
-final class ExampleTableViewController: UITableViewController {
+class ExampleTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
