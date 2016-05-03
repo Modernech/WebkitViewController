@@ -66,7 +66,7 @@
 		C93A4B09813E5AD191EE5539728D644D /* Pods-WebkitViewController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WebkitViewController_Example-frameworks.sh"; sourceTree = "<group>"; };
 		D233A3DA8847EBC9DD7655F4E539AD5C /* Pods-WebkitViewController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WebkitViewController_Tests-umbrella.h"; sourceTree = "<group>"; };
 		D53FAC6DFDA90F6406FEEA3C46458F77 /* Pods-WebkitViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WebkitViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DFA6218B1CD8588E00201EC4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DF9F4E2B1CD85C42008A4888 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WebkitViewController/Assets/Images.xcassets; sourceTree = "<group>"; };
 		EDA5262FE5E8AD2C5B80E5C37A38D188 /* Pods-WebkitViewController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WebkitViewController_Tests.modulemap"; sourceTree = "<group>"; };
 		F15A829E0AE3DA7047A2BBCDE0A93D77 /* Pods-WebkitViewController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WebkitViewController_Example-umbrella.h"; sourceTree = "<group>"; };
 		F46D1D51485A20715AD6A2FD49F99E45 /* Pods-WebkitViewController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WebkitViewController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		DFA621891CD8583000201EC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DFA6218B1CD8588E00201EC4 /* Images.xcassets */,
+				DF9F4E2B1CD85C42008A4888 /* Images.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
