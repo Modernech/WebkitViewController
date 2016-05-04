@@ -1,5 +1,5 @@
 PODS:
-  - WebkitViewController (0.1.8)
+  - WebkitViewController (0.1.10)
 
 DEPENDENCIES:
   - WebkitViewController (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WebkitViewController: b2fd55bc17cb255be9330556530e12c47995c82c
+  WebkitViewController: 7c2eb8aedbc6584c127b94825c64bfb654ed7ca5
 
 COCOAPODS: 0.39.0
