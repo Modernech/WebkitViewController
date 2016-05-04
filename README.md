@@ -13,9 +13,11 @@ WebkitViewController is a simple WKWebView-based WebViewController written purel
 It tries to remain as minimum as what an in-app webView with basic function would be.
 
 ## Image
-* Toolbar with Next, Back, Reload, Action buttons
+* Toolbar with Next, Back, Reload, Action buttons/
+* Compatible with iPhone and iPad.
+* Responds to rotation.
 
-<img src="https://raw.githubusercontent.com/mshrwtnb/WebkitViewController/master/Images/SimulatorScreenShot-iPhone.png" width="200" height="412">
+<img src="https://raw.githubusercontent.com/mshrwtnb/WebkitViewController/master/Images/Screenshot001.png" width="500" height="360">
 
 ## Example
 ```Swift
@@ -29,8 +31,10 @@ self.navigationController?.pushViewController(webViewController, animated: true)
 * iOS 8.0 and later
 * iPhone or iPad
 
-## Installation
+## Settings
+* Disable NSAppTransportSecurity for unlimited browsing.
 
+## Installation
 * [CocoaPods](http://cocoapods.org)
 
 ```ruby
@@ -42,10 +46,6 @@ pod "WebkitViewController"
 ```
 Working on it.
 ```
-
-## Settings
-* Disable NSAppTransportSecurity for unlimited browsing.
-
 ## Author
 
 Masahiro Watanabe, m@nsocean.org
