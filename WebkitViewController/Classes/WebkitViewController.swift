@@ -105,6 +105,14 @@ public extension WebkitViewController {
             return
         }
     }
+    
+    // open links with target=“_blank”
+    public func webView(webView: WKWebView, createWebViewWithConfiguration configuration: WKWebViewConfiguration, forNavigationAction navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        if navigationAction.targetFrame == nil {
+            webView.loadRequest(navigationAction.request)
+        }
+        return nil
+    }
 }
 
 public class WebkitViewController: UIViewController, WebkitProtocol {
