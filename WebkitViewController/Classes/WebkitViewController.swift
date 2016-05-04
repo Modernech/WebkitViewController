@@ -139,12 +139,13 @@ public class WebkitViewController: UIViewController, WebkitProtocol {
     
     // MARK: Initializer
     public required init(withURL URL: NSURL?, withCachePolicy cachePolicy: NSURLRequestCachePolicy?, withTimeoutInterval timeoutInterval: NSTimeInterval?) {
-        
         self.cachePolicy = cachePolicy != nil ? cachePolicy! : .ReloadIgnoringLocalCacheData
         self.timeoutInterval = timeoutInterval != nil ? timeoutInterval! : 30.0
         
-        self.backButton = UIBarButtonItem(image: UIImage(named: "backButton"), style: .Plain, target: nil, action: nil)
-        self.forwardButton = UIBarButtonItem(image: UIImage(named: "forwardButton"), style: .Plain, target: nil, action: nil)
+        let imageNamed = { (name: String) -> UIImage? in UIImage(named: name, inBundle: NSBundle(forClass: WebkitViewController.self), compatibleWithTraitCollection: nil) }
+        
+        self.backButton = UIBarButtonItem(image: imageNamed("backButton") , style: .Plain, target: nil, action: nil)
+        self.forwardButton = UIBarButtonItem(image: imageNamed("forwardButton"), style: .Plain, target: nil, action: nil)
         self.reloadButton = UIBarButtonItem(barButtonSystemItem: .Refresh, target: nil, action: nil)
         self.actionButton = UIBarButtonItem(barButtonSystemItem: .Action, target: nil, action: nil)
         self.backButton.enabled = false
