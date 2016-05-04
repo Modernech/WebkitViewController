@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "WebkitViewController"
-  s.version          = "0.1.7"
+  s.version          = "0.1.8"
   s.summary          = "WebkitViewController is a WKWebView-based WebViewController with Zen mind."
   s.description      = <<-DESC
 WebkitViewController is a simple WKWebView-based WebViewController written purely in Swift.
@@ -27,12 +27,12 @@ It tries to remain as basic as what an in-app webView would be.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'WebkitViewController/Classes/**/*'
-  
-  s.resource_bundles = {
-    'WebkitViewController' => ['WebkitViewController/Classes/Resources/*.png']
-  }
 
-  #s.resources = ['Pod/Assets/**/*.png']
+  s.resources = ['WebkitViewController/Assets/*.png']
+
+  #s.resource_bundles = {
+  #    'WebkitViewController' => ['WebkitViewController/Assets/*.png']
+  #  }
 
   s.frameworks = 'UIKit', 'MapKit'
 
