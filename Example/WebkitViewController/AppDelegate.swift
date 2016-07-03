@@ -13,11 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let navigationController = UINavigationController(rootViewController: ExampleTableViewController(style: .Grouped))
+        let navigationController = UINavigationController(rootViewController: ExampleTableViewController(style: .grouped))
         
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window = UIWindow(frame: UIScreen.main().bounds)
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
         

@@ -27,7 +27,7 @@ self.navigationController?.pushViewController(webViewController, animated: true)
 ```
 
 ## Requirements
-* Swift 2.2
+* Swift 3.0 or later
 * iOS 8.0 and later
 * iPhone or iPad
 
