@@ -14,23 +14,23 @@ public protocol WebkitBrowsable: WKUIDelegate {
     var webView: WKWebView { get }
     var progressView: UIProgressView { get }
     
-    var URL: Foundation.URL? { get }
-    var cachePolicy: NSURLRequest.CachePolicy { get }
-    var timeoutInterval: TimeInterval { get }
+    var URL: NSURL? { get }
+    var cachePolicy: NSURLRequestCachePolicy { get }
+    var timeoutInterval: NSTimeInterval { get }
     
-    init(withURL URL: Foundation.URL?, withCachePolicy cachePolicy: NSURLRequest.CachePolicy?, withTimeoutInterval timeoutInterval: TimeInterval?)
+    init(withURL URL: NSURL?, withWebViewConfiguration webViewConfiguration: WKWebViewConfiguration!, withCachePolicy cachePolicy: NSURLRequestCachePolicy?, withTimeoutInterval timeoutInterval: NSTimeInterval?)
 }
 
 public extension WebkitBrowsable where Self: UIViewController {
     func progressViewFrame() -> CGRect {
-        guard let navigationController = self.navigationController else { return CGRect.zero }
+        guard let navigationController = self.navigationController else { return CGRectZero }
         
         let progressBarHeight: CGFloat = 2.0
         let navigationBarBounds = navigationController.navigationBar.bounds;
-        let barFrame = CGRect(x: 0,
-                                  y: navigationBarBounds.size.height - progressBarHeight,
-                                  width: navigationBarBounds.size.width,
-                                  height: progressBarHeight);
+        let barFrame = CGRectMake(0,
+                                  navigationBarBounds.size.height - progressBarHeight,
+                                  navigationBarBounds.size.width,
+                                  progressBarHeight);
         return barFrame
     }
 }
@@ -50,11 +50,11 @@ public extension WebkitNavigationable where Self: UIViewController {
     
     func navigationToolbarItems() -> [UIBarButtonItem]? {
         switch(UI_USER_INTERFACE_IDIOM()){
-        case .phone:
+        case .Phone:
             // Vertical ? items for vertical layout : horizontal layout
-            return traitCollection.verticalSizeClass == .regular ? toolbarItemsWithFlexibleSpace() : toolbarItemsWithFixedSpaceWidth(45.0)
+            return traitCollection.verticalSizeClass == .Regular ? toolbarItemsWithFlexibleSpace() : toolbarItemsWithFixedSpaceWidth(45.0)
             
-        case .pad:
+        case .Pad:
             return toolbarItemsWithFixedSpaceWidth(55.0)
             
         default:
@@ -63,15 +63,15 @@ public extension WebkitNavigationable where Self: UIViewController {
     }
     
     func toolbarItemsWithFlexibleSpace() -> [UIBarButtonItem] {
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
         let items = [backButton, flexibleSpace, forwardButton, flexibleSpace, reloadButton, flexibleSpace, actionButton]
         return items
     }
     
-    func toolbarItemsWithFixedSpaceWidth(_ width: CGFloat) -> [UIBarButtonItem] {
-        let fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+    func toolbarItemsWithFixedSpaceWidth(width: CGFloat) -> [UIBarButtonItem] {
+        let fixedSpace = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
         fixedSpace.width = width
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
         let items = [backButton, fixedSpace, forwardButton, fixedSpace, reloadButton, flexibleSpace, actionButton]
         return items
     }
