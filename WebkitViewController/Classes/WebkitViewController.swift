@@ -18,7 +18,7 @@ public enum ObservedWebViewProperties: String {
     static let allValues = [estimatedProgress, canGoBack, canGoForward, loading, title]
 }
 
-public extension WebkitViewController {
+extension WebkitViewController {
     func wasPresented() -> Bool {
         return navigationController?.viewControllers.count == 1 &&
             navigationController?.viewControllers[0] == self
@@ -31,7 +31,7 @@ public extension WebkitViewController {
         }
     }
     
-    func didTapToolbarButtonItem(item: UIBarButtonItem){
+    func didTapToolbarButtonItem(_ item: UIBarButtonItem){
         switch(item){
         case self.backButton:
             webView.goBack()
@@ -43,23 +43,23 @@ public extension WebkitViewController {
             webView.reload()
             
         case self.actionButton:
-            guard let url = webView.URL?.absoluteString else { return }
+            guard let url = webView.url?.absoluteString else { return }
             let activity = UIActivityViewController(activityItems:[url], applicationActivities: nil)
             
             switch(UI_USER_INTERFACE_IDIOM()){
-            case .Phone:
-                presentViewController(activity, animated: true, completion: nil)
+            case .phone:
+                present(activity, animated: true, completion: nil)
                 
-            case .Pad:
+            case .pad:
                 let popover = UIPopoverController(contentViewController: activity)
-                popover.presentPopoverFromBarButtonItem(item, permittedArrowDirections: .Any, animated: true)
+                popover.present(from: item, permittedArrowDirections: .any, animated: true)
                 
             default:
                 ()
             }
             
         case self.doneButton:
-            self.dismissViewControllerAnimated(true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
             
         default:
             ()
@@ -68,14 +68,14 @@ public extension WebkitViewController {
     
     // MARK: KVO
     func startObservingWebViewEvents(){
-        ObservedWebViewProperties.allValues.map { $0.rawValue }.forEach { webView.addObserver(self, forKeyPath: $0, options: .New, context: nil) }
+        ObservedWebViewProperties.allValues.map { $0.rawValue }.forEach { webView.addObserver(self, forKeyPath: $0, options: .new, context: nil) }
     }
     
     func stopObservingWebViewEvents(){
         ObservedWebViewProperties.allValues.map { $0.rawValue }.forEach { webView.removeObserver(self, forKeyPath: $0) }
     }
     
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         guard let webView = object as? WKWebView else { return }
         guard let keyPath = keyPath else { return }
         
@@ -89,14 +89,14 @@ public extension WebkitViewController {
             }
             
         case ObservedWebViewProperties.canGoBack.rawValue:
-            backButton.enabled = webView.canGoBack
+            backButton.isEnabled = webView.canGoBack
             
         case ObservedWebViewProperties.canGoForward.rawValue:
-            forwardButton.enabled = webView.canGoForward
+            forwardButton.isEnabled = webView.canGoForward
             
         case ObservedWebViewProperties.loading.rawValue:
-            reloadButton.enabled = !webView.loading
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = webView.loading
+            reloadButton.isEnabled = !webView.isLoading
+            UIApplication.shared.isNetworkActivityIndicatorVisible = webView.isLoading
             
         case ObservedWebViewProperties.title.rawValue:
             navigationItem.title = webView.title
@@ -107,21 +107,21 @@ public extension WebkitViewController {
     }
     
     // open links with target=“_blank”
-    public func webView(webView: WKWebView, createWebViewWithConfiguration configuration: WKWebViewConfiguration, forNavigationAction navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+    @objc(webView:createWebViewWithConfiguration:forNavigationAction:windowFeatures:) public func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
         if navigationAction.targetFrame == nil {
-            webView.loadRequest(navigationAction.request)
+            webView.load(navigationAction.request)
         }
         return nil
     }
 }
 
-public class WebkitViewController: UIViewController, WebkitProtocol {
+open class WebkitViewController: UIViewController, WebkitProtocol {
     // MARK: Properties
-    public var webView: WKWebView {
+    open var webView: WKWebView {
         return _webView
     }
     
-    private var _webView: WKWebView
+    fileprivate var _webView: WKWebView
     
     //    public lazy var webView: WKWebView = {
     //        let webView = WKWebView(frame: CGRectZero, configuration: webViewConfiguration)
@@ -134,53 +134,53 @@ public class WebkitViewController: UIViewController, WebkitProtocol {
     //        return webView
     //    }()
     
-    public lazy var progressView: UIProgressView = {
-        let progressView = UIProgressView(progressViewStyle: .Default)
+    open lazy var progressView: UIProgressView = {
+        let progressView = UIProgressView(progressViewStyle: .default)
         progressView.alpha = 0.0
-        progressView.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
+        progressView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
         return progressView
     }()
     
-    public var URL: NSURL?
-    public var cachePolicy: NSURLRequestCachePolicy
-    public var timeoutInterval: NSTimeInterval
+    open var URL: Foundation.URL?
+    open var cachePolicy: NSURLRequest.CachePolicy
+    open var timeoutInterval: TimeInterval
     
-    public var backButton: UIBarButtonItem
-    public var forwardButton: UIBarButtonItem
-    public var reloadButton: UIBarButtonItem
-    public var actionButton: UIBarButtonItem
-    lazy public var doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: nil, action: nil)
+    open var backButton: UIBarButtonItem
+    open var forwardButton: UIBarButtonItem
+    open var reloadButton: UIBarButtonItem
+    open var actionButton: UIBarButtonItem
+    lazy open var doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
     
     
     // MARK: Initializer
-    public required init(withURL URL: NSURL?, withWebViewConfiguration webViewConfiguration: WKWebViewConfiguration!,withCachePolicy cachePolicy: NSURLRequestCachePolicy?, withTimeoutInterval timeoutInterval: NSTimeInterval?) {
+    public required init(withURL URL: Foundation.URL?, withWebViewConfiguration webViewConfiguration: WKWebViewConfiguration!,withCachePolicy cachePolicy: NSURLRequest.CachePolicy?, withTimeoutInterval timeoutInterval: TimeInterval?) {
         
         
         // WebView
-        _webView = WKWebView(frame: CGRectZero, configuration: webViewConfiguration)
-        _webView.contentMode = .Redraw
-        _webView.opaque = true
+        _webView = WKWebView(frame: CGRect.zero, configuration: webViewConfiguration)
+        _webView.contentMode = .redraw
+        _webView.isOpaque = true
         _webView.allowsBackForwardNavigationGestures = true
-        _webView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        _webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         
-        self.cachePolicy = cachePolicy != nil ? cachePolicy! : .ReloadIgnoringLocalCacheData
+        self.cachePolicy = cachePolicy != nil ? cachePolicy! : .reloadIgnoringLocalCacheData
         self.timeoutInterval = timeoutInterval != nil ? timeoutInterval! : 30.0
         
-        let imageNamed = { (name: String) -> UIImage? in UIImage(named: name, inBundle: NSBundle(forClass: WebkitViewController.self), compatibleWithTraitCollection: nil) }
+        let imageNamed = { (name: String) -> UIImage? in UIImage(named: name, in: Bundle(for: WebkitViewController.self), compatibleWith: nil) }
         
-        self.backButton = UIBarButtonItem(image: imageNamed("backButton") , style: .Plain, target: nil, action: nil)
-        self.forwardButton = UIBarButtonItem(image: imageNamed("forwardButton"), style: .Plain, target: nil, action: nil)
-        self.reloadButton = UIBarButtonItem(barButtonSystemItem: .Refresh, target: nil, action: nil)
+        self.backButton = UIBarButtonItem(image: imageNamed("backButton") , style: .plain, target: nil, action: nil)
+        self.forwardButton = UIBarButtonItem(image: imageNamed("forwardButton"), style: .plain, target: nil, action: nil)
+        self.reloadButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: nil)
         
-        self.actionButton = UIBarButtonItem(barButtonSystemItem: .Action, target: nil, action: nil)
-        self.backButton.enabled = false
-        self.forwardButton.enabled = false
+        self.actionButton = UIBarButtonItem(barButtonSystemItem: .action, target: nil, action: nil)
+        self.backButton.isEnabled = false
+        self.forwardButton.isEnabled = false
         
         super.init(nibName: nil, bundle: nil)
         
         _webView.navigationDelegate = self
-        _webView.UIDelegate = self
+        _webView.uiDelegate = self
         
         startObservingWebViewEvents()
         
@@ -188,10 +188,10 @@ public class WebkitViewController: UIViewController, WebkitProtocol {
         
         if let URL = URL {
             self.URL = URL
-            let request = NSURLRequest(URL: URL,
+            let request = URLRequest(url: URL,
                                        cachePolicy: self.cachePolicy,
                                        timeoutInterval: self.timeoutInterval)
-            webView.loadRequest(request)
+            webView.load(request)
         }
     }
     
@@ -204,7 +204,7 @@ public class WebkitViewController: UIViewController, WebkitProtocol {
     }
     
     // MARK: Life Cycle
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         progressView.frame = progressViewFrame()
         navigationController?.navigationBar.addSubview(progressView)
@@ -213,19 +213,19 @@ public class WebkitViewController: UIViewController, WebkitProtocol {
         view.addSubview(webView)
     }
     
-    override public func viewWillAppear(animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(false, animated: false)
     }
     
-    override public func viewWillDisappear(animated: Bool) {
+    override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setToolbarHidden(true, animated: false)
         progressView.removeFromSuperview()
     }
     
     // MARK: Trait
-    override public func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
+    override open func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         
         if wasPresented() {
@@ -237,7 +237,7 @@ public class WebkitViewController: UIViewController, WebkitProtocol {
     }
     
     // MARK: WKNavigationDelegate - implement more if you like
-    public func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+    open func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         // It's kind of odd that we need JS to read loaded HTML?
         webView.evaluateJavaScript("document.body.innerHTML", completionHandler: {
             (html, error) in
