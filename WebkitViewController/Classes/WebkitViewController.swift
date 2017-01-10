@@ -59,6 +59,10 @@ extension WebkitViewController {
       }
       
     case self.doneButton:
+      if let clickMethod = self.doneButtonClicked {
+        clickMethod(webView)
+        return
+      }
       self.dismiss(animated: true, completion: nil)
       
     default:
@@ -141,6 +145,7 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
     return progressView
   }()
   
+  open var doneButtonClicked: ((WKWebView)->Void)?
   open var URL: Foundation.URL?
   open var cachePolicy: NSURLRequest.CachePolicy
   open var timeoutInterval: TimeInterval
