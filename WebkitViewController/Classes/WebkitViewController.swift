@@ -31,7 +31,7 @@ extension WebkitViewController {
     }
   }
   
-  func didTapToolbarButtonItem(_ item: UIBarButtonItem){
+  @objc func didTapToolbarButtonItem(_ item: UIBarButtonItem){
     switch(item){
     case self.backButton:
       webView.goBack()
@@ -247,4 +247,3 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
     })
   }
 }
-
