@@ -212,7 +212,7 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
     webView.frame = CGRect(x: view.frame.origin.x,
                            y: view.frame.origin.y,
                            width: view.frame.size.width,
-                           height: view.frame.size.height - (navigationController?.toolbar.frame.size.height)!)
+                           height: view.frame.size.height - UIApplication.shared.statusBarFrame.size.height - (navigationController?.toolbar.frame.size.height)!)
     navigationController?.toolbar.barTintColor = UIColor.white
 
     view.addSubview(webView)
