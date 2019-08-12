@@ -252,4 +252,10 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
       }
     })
   }
+  
+  open func webView(_ webView: WKWebView,
+                    decidePolicyFor navigationAction: WKNavigationAction,
+                    decisionHandler: @escaping (WKNavigationActionPolicy) -> Void){
+    decisionHandler(.allow)
+  }
 }
