@@ -214,8 +214,15 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
                            width: view.frame.size.width,
                            height: view.frame.size.height - UIApplication.shared.statusBarFrame.size.height - (navigationController?.toolbar.frame.size.height)!)
     navigationController?.toolbar.barTintColor = UIColor.white
-
+    
     view.addSubview(webView)
+    
+    if wasPresented() {
+      navigationItem.rightBarButtonItems = [doneButton]
+    }
+    
+    let items = navigationToolbarItems()
+    setToolbarItems(items, animated: false)
   }
   
   override open func viewWillAppear(_ animated: Bool) {
@@ -227,18 +234,6 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
     super.viewWillDisappear(animated)
     navigationController?.setToolbarHidden(true, animated: false)
     progressView.removeFromSuperview()
-  }
-  
-  // MARK: Trait
-  override open func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-    super.traitCollectionDidChange(previousTraitCollection)
-    
-    if wasPresented() {
-      navigationItem.rightBarButtonItems = [doneButton]
-    }
-    
-    let items = navigationToolbarItems()
-    setToolbarItems(items, animated: false)
   }
   
   // MARK: WKNavigationDelegate - implement more if you like
