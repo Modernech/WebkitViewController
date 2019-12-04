@@ -208,7 +208,12 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
     super.viewDidLoad()
     progressView.frame = progressViewFrame()
     navigationController?.navigationBar.addSubview(progressView)
-    
+    if wasPresented() {
+      self.navigationItem.rightBarButtonItems = [doneButton]
+    }
+
+    let items = navigationToolbarItems()
+    self.setToolbarItems(items, animated: false)
     webView.frame = CGRect(x: view.frame.origin.x,
                            y: view.frame.origin.y,
                            width: view.frame.size.width,
@@ -216,13 +221,6 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
     navigationController?.toolbar.barTintColor = UIColor.white
     
     view.addSubview(webView)
-    
-    if wasPresented() {
-      navigationItem.rightBarButtonItems = [doneButton]
-    }
-    
-    let items = navigationToolbarItems()
-    setToolbarItems(items, animated: false)
   }
   
   override open func viewWillAppear(_ animated: Bool) {
