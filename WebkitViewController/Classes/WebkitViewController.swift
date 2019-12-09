@@ -206,6 +206,7 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
   // MARK: Life Cycle
   override open func viewDidLoad() {
     super.viewDidLoad()
+    definesPresentationContext = true
     progressView.frame = progressViewFrame()
     navigationController?.navigationBar.addSubview(progressView)
     if wasPresented() {
