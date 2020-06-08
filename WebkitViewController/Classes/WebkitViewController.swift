@@ -149,7 +149,7 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
   open var forwardButton: UIBarButtonItem
   open var reloadButton: UIBarButtonItem
   open var actionButton: UIBarButtonItem
-  lazy open var doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+  lazy open var doneButton = UIBarButtonItem(title: "返回", style: .plain, target: nil, action: nil)
   
   
   // MARK: Initializer
