@@ -215,13 +215,27 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
 
     let items = navigationToolbarItems()
     self.setToolbarItems(items, animated: false)
-    webView.frame = CGRect(x: view.frame.origin.x,
+    /*webView.frame = CGRect(x: view.frame.origin.x,
                            y: view.frame.origin.y,
                            width: view.frame.size.width,
-                           height: view.frame.size.height - UIApplication.shared.statusBarFrame.size.height - (navigationController?.toolbar.frame.size.height)!)
+                           height: view.frame.size.height - UIApplication.shared.statusBarFrame.size.height - (navigationController?.toolbar.frame.size.height)!)*/
+    if #available(iOS 9.0, *) {
+      webView.allowsLinkPreview = false
+    }
     navigationController?.toolbar.barTintColor = UIColor.white
     self.navigationController?.navigationBar.isTranslucent = false
     view.addSubview(webView)
+    if #available(iOS 11.0, *) {
+      NSLayoutConstraint.activate([
+        view.leadingAnchor.constraint(equalTo: webView.leadingAnchor),
+        view.trailingAnchor.constraint(equalTo: webView.trailingAnchor),
+        view.safeAreaLayoutGuide.topAnchor.constraint(equalTo: webView.topAnchor),
+        view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: webView.bottomAnchor)
+      ])
+    } else {
+      view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: [], metrics: nil, views: [ "view": webView ]))
+      view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: [], metrics: nil, views: [ "view": webView ]))
+    }
   }
   
   override open func viewWillAppear(_ animated: Bool) {
