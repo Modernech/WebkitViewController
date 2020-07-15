@@ -203,6 +203,24 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
     stopObservingWebViewEvents()
   }
   
+  var hasTopNotch: Bool {
+    if #available(iOS 13.0,  *) {
+      return UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.safeAreaInsets.top ?? 0 > 20
+    }else if #available(iOS 11.0, *) {
+      return UIApplication.shared.delegate?.window??.safeAreaInsets.top ?? 0 > 20
+    }
+
+    return false
+  }
+  
+  var toolBarHeight: CGFloat {
+    let toolHeight: CGFloat = (hasTopNotch ? 34.0 : 0)
+    if let toolBar = self.navigationController?.toolbar {
+      return toolHeight + toolBar.frame.size.height
+    }
+    return toolHeight
+  }
+  
   // MARK: Life Cycle
   override open func viewDidLoad() {
     super.viewDidLoad()
@@ -218,7 +236,8 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
     webView.frame = CGRect(x: view.frame.origin.x,
                            y: view.frame.origin.y,
                            width: view.frame.size.width,
-                           height: view.frame.size.height - UIApplication.shared.statusBarFrame.size.height - (navigationController?.toolbar.frame.size.height)!)
+                           height: view.frame.size.height - UIApplication.shared.statusBarFrame.size.height - toolBarHeight
+                          )
     if #available(iOS 9.0, *) {
       webView.allowsLinkPreview = false
     }
