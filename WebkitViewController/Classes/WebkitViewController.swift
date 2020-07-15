@@ -203,22 +203,11 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
     stopObservingWebViewEvents()
   }
   
-  var hasTopNotch: Bool {
-    if #available(iOS 13.0,  *) {
-      return UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.safeAreaInsets.top ?? 0 > 20
-    }else if #available(iOS 11.0, *) {
-      return UIApplication.shared.delegate?.window??.safeAreaInsets.top ?? 0 > 20
-    }
-
-    return false
-  }
-  
   var toolBarHeight: CGFloat {
-    let toolHeight: CGFloat = (hasTopNotch ? 34.0 : 0)
     if let toolBar = self.navigationController?.toolbar {
-      return toolHeight + toolBar.frame.size.height
+      return toolBar.frame.size.height
     }
-    return toolHeight
+    return 0
   }
   
   // MARK: Life Cycle
