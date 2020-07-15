@@ -220,7 +220,7 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
                            width: view.frame.size.width,
                            height: view.frame.size.height - UIApplication.shared.statusBarFrame.size.height - (navigationController?.toolbar.frame.size.height)!)
     navigationController?.toolbar.barTintColor = UIColor.white
-    
+    self.navigationController?.navigationBar.isTranslucent = false
     view.addSubview(webView)
   }
   
