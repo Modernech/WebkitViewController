@@ -224,7 +224,7 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
     webView.frame = CGRect(x: view.frame.origin.x,
                            y: view.frame.origin.y,
                            width: view.frame.size.width,
-                           height: view.frame.size.height - UIApplication.shared.statusBarFrame.size.height - toolBarHeight
+                           height: view.frame.size.height - toolBarHeight
                           )
     if #available(iOS 9.0, *) {
       webView.allowsLinkPreview = false
