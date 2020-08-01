@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import AuthenticationServices
 
 public enum ObservedWebViewProperties: String {
   case estimatedProgress
@@ -260,5 +261,27 @@ open class WebkitViewController: UIViewController, WebkitProtocol {
                     decidePolicyFor navigationAction: WKNavigationAction,
                     decisionHandler: @escaping (WKNavigationActionPolicy) -> Void){
     decisionHandler(.allow)
+  }
+}
+
+@available(iOS 13.0, *)
+extension WebkitViewController : ASAuthorizationControllerPresentationContextProviding {
+  public func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+      return self.view.window!
+  }
+}
+
+@available(iOS 13.0, *)
+extension WebkitViewController: ASAuthorizationControllerDelegate {
+  public func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+    if let e = error as? ASAuthorizationError {
+      switch e.code {
+        case .canceled:
+          self.dismiss(animated: true, completion: nil)
+          return
+        default:
+          print("other errors: ", e.localizedDescription)
+      }
+    }
   }
 }
