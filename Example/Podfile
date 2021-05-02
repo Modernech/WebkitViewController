@@ -1,9 +1,9 @@
 use_frameworks!
 
-target 'WebkitViewController_Example', :exclusive => true do
+target 'WebkitViewController_Example' do
   pod 'WebkitViewController', :path => '../'
 end
 
-target 'WebkitViewController_Tests', :exclusive => true do
+target 'WebkitViewController_Tests' do
   pod 'WebkitViewController', :path => '../'
 end

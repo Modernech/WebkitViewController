@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 import WebkitViewController
 
 class ExampleTableViewController: UITableViewController {
@@ -30,8 +31,9 @@ class ExampleTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        let configuration = WKWebViewConfiguration()
         let URL = Foundation.URL(string: "http://news.google.com")
-        let webViewController = WebkitViewController(withURL: URL, withCachePolicy: nil, withTimeoutInterval: nil)
+        let webViewController = WebkitViewController(withURL: URL, withWebViewConfiguration: configuration, withCachePolicy: nil, withTimeoutInterval: nil)
         
         if (indexPath as NSIndexPath).row == 0 {
             self.navigationController?.pushViewController(webViewController, animated: true)

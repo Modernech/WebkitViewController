@@ -1,6 +1,5 @@
 # WebkitViewController
 
-[![CI Status](http://img.shields.io/travis/Masahiro Watanabe/WebkitViewController.svg?style=flat)](https://travis-ci.org/Masahiro Watanabe/WebkitViewController)
 [![Version](https://img.shields.io/cocoapods/v/WebkitViewController.svg?style=flat)](http://cocoapods.org/pods/WebkitViewController)
 [![License](https://img.shields.io/cocoapods/l/WebkitViewController.svg?style=flat)](http://cocoapods.org/pods/WebkitViewController)
 [![Platform](https://img.shields.io/cocoapods/p/WebkitViewController.svg?style=flat)](http://cocoapods.org/pods/WebkitViewController)

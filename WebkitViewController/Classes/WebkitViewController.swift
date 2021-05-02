@@ -51,8 +51,9 @@ extension WebkitViewController {
         present(activity, animated: true, completion: nil)
         
       case .pad:
-        let popover = UIPopoverController(contentViewController: activity)
-        popover.present(from: item, permittedArrowDirections: .any, animated: true)
+        activity.modalPresentationStyle = UIModalPresentationStyle.popover
+        activity.popoverPresentationController?.sourceView = self.view
+        present(activity, animated: true, completion: nil)
         
       default:
         ()

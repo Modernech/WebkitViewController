@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "WebkitViewController"
-  s.version          = "0.1.13"
+  s.version          = "0.1.15"
   s.summary          = "WebkitViewController is a WKWebView-based WebViewController with Zen mind."
   s.description      = <<-DESC
 WebkitViewController is a simple WKWebView-based WebViewController written purely in Swift.
@@ -24,7 +24,7 @@ It tries to remain as basic as what an in-app webView would be.
   s.author           = { "Masahiro Watanabe" => "m@nsocean.org" }
   s.source           = { :git => "https://github.com/mshrwtnb/WebkitViewController.git", :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'WebkitViewController/Classes/**/*'
 
